@@ -1,0 +1,12 @@
+import express from "express";
+// import { adminRouter } from "./resources/admin";
+import { teacherRouter } from "./resources/teacher";
+import { studentRouter } from "./resources/student";
+import { adminRouter } from "./resources/admin";
+// import { userRouter } from "./resources/user/user.router";
+export const restRouter = express.Router();
+//restRouter.use("/admin", adminRouter);
+restRouter.use("/teacher", teacherRouter);
+restRouter.use("/student", studentRouter);
+restRouter.use("/admin", adminRouter);
+//nrestRouter.use("/users", userRouter);
